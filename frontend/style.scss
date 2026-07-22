@@ -55,29 +55,96 @@ body{
         background: linear-gradient(30deg, var(--bg-color1)50%, var(--bg-color2) 80%, var(--bg-color3));
         border-radius: 0px 0px 15px 15px;
 
+        .line-1{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 100px;
+            width: 2px;
+            height: 100%; 
+            opacity: 0.5;
+            background: var(--text-color2);
+        }
+        .line-2{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 108px;
+            width: 2px;
+            height: 100%; 
+            opacity: 0.5;
+            background: var(--text-color2);
+        }
+        .line-3{
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 108px;
+            width: 2px;
+            height: 100%; 
+            opacity: 0.5;
+            background: var(--text-color2);
+        }
+        .line-4{
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 100px;
+            width: 2px;
+            height: 100%; 
+            opacity: 0.5;
+            background: var(--text-color2);
+        }
+        .hero-side-name{
+            position: absolute;
+            display: block;
+            top: 20%;
+            right: 40px;
+            transform: rotate(90deg);
+            font-size: clamp(10px, 3vw, 20px);
+            color: var(--text-color2);
+            opacity: 0.5;
+        }
+        .hero-side-name2{
+            position: absolute;
+            display: block;
+            top: 60%;
+            left: 40px;
+            transform: rotate(90deg);
+            font-size: clamp(10px, 3vw, 20px);
+            color: var(--text-color2);
+            opacity: 0.5;
+        }
+
         .top-info{
             display: flex;
             margin: 2rem 0.5rem;
             justify-content: start;
             width: 100%;
+            transform: translate(0px, -60px);
+            z-index: 2;
 
             .hero-info{
-                // background: var(--text-color1);
+                background: var(--bg-color1);
                 color: var(--text-color1);
-                border: 1px dashed #C0B7B1;
+                box-shadow: 0px 1px 1px var(--text-color2);
                 padding: 1rem; 
                 border-radius: 15px;
                 width: clamp(300px, 50%, 500px);
 
                 h2{
                     font-size: clamp(20px, 5vw, 30px);
-                }
-                h1{
-                    font-size: clamp(20px, 5vw, 30px);
+                    padding-bottom: 0.5rem;
+
+                    u{
+                        background: #550000e5;
+                        border-radius: 5px;
+                        padding: 0rem 0.5rem;
+                    }
                 }
                 p{
-                    font-size: clamp(13px, 5vw, 20px);
-                    margin-bottom: 1rem;
+                    font-size: clamp(13px, 3vw, 20px);
+                    margin-bottom: 1.6rem;
                 }
                 .hero-btn{
                     width: 100%;
@@ -129,7 +196,7 @@ body{
     .about-container{
         display: flex;
         flex-direction: column;
-        border: 1px solid var(--text-color2);
+        box-shadow: 0px -1px 1px var(--text-color2);
         padding: 1rem 0rem;
         justify-content: center;
         align-items: center;
@@ -148,12 +215,19 @@ body{
             margin-top: 1.3rem;
             border-radius: 5rem;
             margin-bottom: 2.3rem;
+            overflow: hidden;
+
+            .profile-img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
         }
         
         .about-info{
             color: var(--text-color1);
             text-align: start;
-            padding: 0.5rem 0.4rem;
+            padding: 0.5rem 1rem;
             margin-bottom: 1.3rem;
 
             .side-header{
@@ -166,13 +240,13 @@ body{
             align-items: start;
             text-align: left;
             width: 100%;
-            padding: 0px 0px 0px 10px;
+            padding: 0rem 1rem;
         }
 
         .about-card{
             width: 100%;
             display: grid;
-            padding: 0.5rem 0.5rem;
+            padding: 0.5rem 1rem;
             grid-template-columns: 0.5fr 0.5fr 1fr;
             gap: 0.5rem;
 
@@ -238,10 +312,13 @@ body{
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
 
-    h2{
+    #pro-skill-header{
         color: var(--text-color1);
         text-align: center;
+        justify-content: center;
         font-weight: 700;
+        width: 100%;
+        margin-top: 1rem;
     }
 
     .pro-container{
@@ -251,19 +328,19 @@ body{
         justify-content: center;
         align-items: center;
         padding: 1rem 1rem;
+        margin-bottom: 1.8rem;
         width: 100%;
 
         .quick-link{
             text-decoration: none;
-            color: var(--text-color1);
+            color: var(--bg-color1);
             padding: 0.5rem 2rem;
             font-size: 15px;
             font-weight: 600;
             border-radius: 15px;
-            margin: 1rem 0.5rem;
+            margin: 1.8rem 0.5rem;
             transition: all 0.3s ease-in-out; 
             text-decoration: underline;
-                     
         } 
         .quick-link:hover{
             background: var(--bg-color3);
@@ -277,6 +354,9 @@ body{
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 1rem;
+            gap: 2rem;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
 
             .pro-card{
                 font-size: 10px;
@@ -289,13 +369,20 @@ body{
                 border-radius: 15px;
                 color: var(--text-color1);
                 cursor: pointer;
-                box-shadow: 0px 9px 15px -5px var(--text-color2);
+                box-shadow: 0px 1px 3px var(--text-color2);
 
                 .pro-card-img{
                     width: 100%;
-                    height: 150px;
+                    height: 130px;
                     background: var(--text-color1);
                     border-radius: 15px;
+                    overflow: hidden;
+
+                    .img{
+                        object-fit: fill;
+                        width: 110%;
+                        object-position: center;
+                    }
                 }
                 
                 .pro-card-info{
@@ -308,6 +395,7 @@ body{
                     h2{
                         font-size: 18px;
                         color: var(--text-color1);
+                        text-align: start;
                     }
                     p{
                         text-align: start;
@@ -320,6 +408,7 @@ body{
                         display: flex;
                         gap: 0.5rem;
                         margin: 1rem 0rem;
+                        
 
                         .icon-box{
                             display: flex;
@@ -331,7 +420,7 @@ body{
                             justify-content: space-evenly;
                             text-align: center;
 
-                            h2{
+                            h2{ 
                                 font-size: 13px; 
                             }
                         }
@@ -358,22 +447,149 @@ body{
     }
 }
 
+#skills{
+    position: relative;
+    align-items: center;
+    max-width: 1440px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    #skill_header{
+        color: var(--text-color1);
+        text-align: center;
+        font-weight: 700;
+        display: none;
+    }
+
+    .skills-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 15px;
+        color: var(--text-color1);
+
+        .skills-icons{
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: progress;
+            text-align: center;
+            padding: 0.5rem 0.5rem;
+            border-radius: 15px;
+            color: var(--text-color1);
+            font-size: clamp(10px, 50%, 500px);
+            width: 150px;
+            height: 100px;
+
+            .icons{
+                font-size: 30px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
 #contact{
     position: relative;
     align-items: center;
     max-width: 1440px;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 15px;
+    background: linear-gradient(30deg, var(--bg-color1)50%, var(--bg-color2) 80%, var(--bg-color3));
+
+
+    .contact-header{
+        color: var(--text-color1);
+        text-align: center;
+        font-weight: 700;
+    }
 
     .contact-container{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 1rem 0.5rem;
         width: 100%;
+        gap: 1rem;
         border-radius: 15px;
         color: var(--text-color1);
+
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0.5rem 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            color: var(--text-color1);
+            font-size: clamp(10px, 50%, 500px);
+            width: clamp(300px, 50%, 500px);
+            gap: 1.8rem;
+
+            .icons{
+                font-size: 30px;
+                margin-bottom: 0.5rem;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            width: clamp(300px, 50%, 500px);
+            padding: 1rem 0.5rem;
+
+            input{
+                width: 100%;
+                padding: 0.5rem 1rem;
+                border-radius: 15px;
+                margin-bottom: 0.5rem;
+                background: var(--text-color1);
+                color: var(--text-color1);
+                border: 1px solid var(--text-color2);
+            }
+
+            textarea{
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 200px;
+                min-height: 100px;
+                padding: 0.5rem 1rem;
+                border-radius: 15px;
+                margin-bottom: 0.5rem;
+                background: var(--text-color1);
+                color: var(--text-color1);
+                border: 1px solid var(--text-color2);
+            }
+
+            .contact-btn{
+                width: 100%;
+                padding: 0.5rem 1rem;
+                border-radius: 15px;
+                background: var(--bg-color3);
+                color: var(--text-color1);
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
     }
 }
 

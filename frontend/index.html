@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,32 @@
     <script src="https://kit.fontawesome.com/8b3cdec8fc.js" crossorigin="anonymous"></script>
     <title>Mogotsi-Mothimonye</title>
 </head>
+
 <body>
-    
+
     <section id="hero">
         <div class="hero-container">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <p class="hero-side-name">Mogotsi Mothionye</p>
+            <p class="hero-side-name2">Mogotsi Mothionye</p>
+            <div class="line-3"></div>
+            <div class="line-4"></div>
+
             <div class="top-info">
                 <div class="hero-info">
-                    <h2>Hello, there!</h2>
-                    <h1>Software Developer</h1>
-                    <p>I build: <span>Website</span></p>
+                    <h2>Hello, <u>There!</u></h2>
+                    <p>To the world of web development and beyond!</p>
                     <div class="hero-btn">
-                        <a href="#">View my work</a>
-                        <a href="#">Contact me</a>
+                        <a href="#projects">View my work</a>
+                        <a href="#contact">Contact me</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="" alt="">
                 </div>
             </div>
-            <div class="bottom-info">
+            <!-- <div class="bottom-info">
                 <div class="hero-card">
                     <h2>card-1</h2>
                     <p></p>
@@ -38,19 +46,21 @@
                     <h2>card-2</h2>
                     <p></p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <section id="about-skills">
-        <div class="about-container">
+        <div class="about-container">   
             <h2 class="main-header">More About Me</h2>
             <div class="about-image">
-                <img src="" alt="">
+                <img class="profile-img" src="./images/my-image.jpg" alt="">
             </div>
             <div class="about-info">
                 <h2 class="side-header">More about me</h2>
-                <p>I'm creative when crafting effective websites and platforms to propel competitive advantage and revenue growth. In the process of learning full-stack Development and aiming to build real-world project nor be in a world that will test my patience and the ability to think outside the box.</p>
+                <p>I'm creative when crafting effective websites and platforms to propel competitive advantage and
+                    revenue growth. In the process of learning full-stack Development and aiming to build real-world
+                    project nor be in a world that will test my patience and the ability to think outside the box.</p>
             </div>
             <h2 class="skills-header">Skills</h2>
             <div class="about-card">
@@ -86,18 +96,20 @@
     </section>
 
     <section id="projects">
-        <h2>Projects Explorer</h2>
+        <h2 id="pro-skill-header">Projects Explorer</h2>
+        <h2 id="skill_header" style="display: none;text-align: center;color: var(--text-color1);width: 100%;">Skills Explorer</h2>
         <div class="pro-container">
-            <a href="#" class="quick-link" onclick="showProjects()">Projects</a>
-            <a href="#" class="quick-link" onclick="showSkills()">Skills</a>
-            <div class="pro-box">
+            <button id="quick_link1" class="quick-link">Projects</button> 
+            <button id="quick_link2" class="quick-link">Skills</button>
+            <div class="pro-box" id="pro-box">
                 <div class="pro-card" onclick="ToProject()">
-                    <div class="pro-card-img">
-                        <img src="" alt=""> 
-                    </div>
+                    <div class="pro-card-img" style="overflow: hidden;">
+                        <img class="img" src="./images/habits-app.png" alt="Habits App">
+                    </div> 
                     <div class="pro-card-info">
-                        <h2>Habits App</h2>
-                        <p>Let's you add new habits to a list, that can be edited, placed in a category, or delete it.</p>
+                        <h2>Habits App</h2> 
+                        <p>Let's you add new habits to a list, that can be edited, placed in a category, or delete it.
+                        </p>
                         <div class="pro-icons">
                             <div class="icon-box" style="background: var(--html-color);">
                                 <i class="fa-brands fa-html5 icons"></i>
@@ -111,11 +123,106 @@
                         <!-- <div class="pro-btn">
                             <a href="#" class="pro-btn-link">Explore!</a>
                         </div> -->
-                    </div> 
+                    </div>
+                </div>
+                <div class="pro-card" onclick="ToProject()">
+                    <div class="pro-card-img" style="overflow: hidden;">
+                        <img class="img" src="./images/slip-pinger.png" alt="Slip Ping">
+                    </div>
+                    <div class="pro-card-info">
+                        <h2>Slip Ping</h2>
+                        <p>Users can login and create accounts, be able to see the messages other users sent to the
+                            receiver</p>
+                        <div class="pro-icons">
+                            <div class="icon-box" style="background: var(--html-color);">
+                                <i class="fa-brands fa-html5 icons"></i>
+                                <h2>HTML</h2>
+                            </div>
+                            <div class="icon-box" style="background: var(--python-color);">
+                                <i class="fa-brands fa-python icons"></i>
+                                <h2>Python</h2>
+                            </div>
+                            <div class="icon-box"
+                                style="background: var(--sqlite-color); border:1px solid var(--text-color1);">
+                                <i class="fa-solid fa-code"></i>
+                                <h2>SQLite</h2>
+                            </div>
+                        </div>
+                        <!-- <div class="pro-btn">
+                            <a href="#" class="pro-btn-link">Explore!</a>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="skills" style="display: none;">
+        <div class="skills-container" id="skills-container">
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-brands fa-html5 icons"></i>
+                <h2>HTML</h2>
+            </div>
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-brands fa-css icons"></i>
+                <h2>CSS</h2>
+            </div>
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-brands fa-js icons"></i>
+                <h2>JavaScript</h2>
+            </div>
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-brands fa-python icons"></i>
+                <h2>Python</h2>
+            </div>
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-solid fa-code icons"></i>
+                <h2>SQL</h2>
+            </div>
+            <div class="skills-icons" style="background: var(--html-color);">
+                <i class="fa-brands fa-github icons"></i>
+                <h2>Github</h2>
+            </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="contact-header">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-box">
+                    <i class="fa-solid fa-phone icons"></i>
+                    <h2>Phone</h2>
+                    <p>+27 69 158 9832</p>
+                </div>
+                <div class="contact-box">
+                    <i class="fa-solid fa-envelope icons"></i>
+                    <h2>Email</h2>
+                    <p>mogotsidev@gmail.com</p>
+                </div>
+            </div>
+            <form action="/contact" method="post">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your fullname" required>
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Enter your message" required></textarea>
+
+                <button class="contact-btn" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Mogotsi-Mothimonye. All rights reserved.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
